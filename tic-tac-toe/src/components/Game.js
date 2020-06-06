@@ -1,23 +1,47 @@
-import React from 'react';
+import React, { useState } from "react";
 import Board from './Board';
+import { calculateWinner } from "../helper";
+
+const styles = {
+	width: "200px",
+	margin: "20px auto",
+};
 
 const Game = () => {
+  const [board, setBoard] = useState(Array(9).fill(null));
+  const [xIsNext, setXisNext] = useState(true);
 
-  const handleClick = (event) => {
-    
+  const winner = calculateWinner(board);
+
+  const handleClick = i => {
+    const boardCopy = [...board];
+    // if user clicks on occupied square or if the game is won, return 
+    if(winner || boardCopy[i]) return;
+    // put an X or an O in the clicked square
+    boardCopy[i] = xIsNext ? 'X' : 'O';
+    setBoard(boardCopy);
+    setXisNext(!xIsNext);
   };
   
   const jumpTo = () => {
     
   };
   
-  const renderMoves = () => {
-    
-  };
+  const renderMoves = () => (
+    <button onClick={() => setBoard(Array(9).fill(null))}>
+      Start New Game
+    </button>
+  );
   
 
   return(
-    <Board onClick={handleClick}/>
+    <>
+      <Board squares={board} onClick={handleClick}/>
+      <div style={styles}>
+        <p>{winner ? `Winner: ${winner}` : 'Next Player: ' + (xIsNext ? 'X' : 'O')}</p>
+        {renderMoves()}
+      </div>
+    </>
   )
 };
   

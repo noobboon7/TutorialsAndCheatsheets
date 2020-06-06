@@ -11,19 +11,12 @@ const style = {
 	gridTemplate: "repeat(3, 1fr) / repeat(3, 1fr)",
 };
 
-const Board = ({squares, onClick}) => (
-  <div style={style}>
-    <Square value='1' onClick={() => onClick('dummy data')}/>
-    <Square value='2' onClick={() => onClick('dummy data')}/>
-    <Square value='3' onClick={() => onClick('dummy data')}/>
-    <Square value='4' onClick={() => onClick('dummy data')}/>
-    <Square value='5' onClick={() => onClick('dummy data')}/>
-    <Square value='6' onClick={() => onClick('dummy data')}/>
-    <Square value='7' onClick={() => onClick('dummy data')}/>
-    <Square value='8' onClick={() => onClick('dummy data')}/>
-    <Square value='9' onClick={() => onClick('dummy data')}/>
-  </div>
-
-)
+const Board = ({ squares, onClick }) => (
+	<div style={style}>
+		{squares.map((square, idx) => (
+			<Square key={idx} value={square} onClick={() => onClick(idx)} />
+		))}
+	</div>
+);
 
 export default Board;
