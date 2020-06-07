@@ -1,12 +1,15 @@
 import React from 'react';
-// import Playgound from './Playground';
+import Playgound from './Playground';
 import Paint from './components/Paint';
 
 
 function App() {
   return (
-    // <Playgound/>
+    <div>
+
     <Paint />
+    <Playgound/>
+    </div>
   )
 }
 
