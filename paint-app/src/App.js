@@ -8,7 +8,7 @@ function App() {
     <div>
 
     <Paint />
-    <Playgound/>
+    {/* <Playgound/> */}
     </div>
   )
 }

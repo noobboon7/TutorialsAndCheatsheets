@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import randomColor from "randomcolor";
+// import randomColor from "randomcolor";
 
 export default function ColorPicker({
 	colors = [],
