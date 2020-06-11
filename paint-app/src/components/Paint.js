@@ -4,7 +4,6 @@ import randomColor from "randomcolor";
 import Name from './Name';
 import Canvas from './Canvas';
 import ColorPicker from './ColorPicker';
-import WindowSize from './WindowSize';
 import RefreshButton from './RefreshButton';
 import useWindowSize from './WindowSize';
 
