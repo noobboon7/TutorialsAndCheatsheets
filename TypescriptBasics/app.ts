@@ -1,62 +1,12 @@
-/*============ */
-/// Objects//////
-/*============ */
-
-// const person: {
-//  name: string; 
-//  age: number;
-// } = {
- // inference version
-const personOBJ = {
- name: "JerrSonJefferson",
- age: 2000,
- hobbies: ['fitness', 'music']
-}; 
-console.log(person.name);
-
-/*============ */
-/// Arrays//////
-/*============ */
-
-//types
-let favActivities: string[]
-// let favActivities: any[]
-// let favActivities: number[]
-
-favActivities = ['sports']
-
-for (const hobby  of personOBJ.hobbies) {
- console.log(hobby.toUpperCase())
+// unionTypes: union is written with a pipe operator  
+function combine(input1: number | string, input2: number | string) {
+ let result 
+ if (typeof input1 === "number" && typeof input2 === "number"){
+  result = input1 + input2
+ }
+ else{
+  result = input1.toString() + input2.toString()
+ }
+		return result
 }
-/*============= */
-///// Tuple//////
-/*============= */
-
-
-const personTPL: {
- name: string; 
- age: number;
- hobbies: string[];
- role: [number, string];
-} = {
- name: "JerrSonJefferson",
- age: 2000,
- hobbies: ['fitness', 'music'],
- role: [6,'software developer']
-}; 
-
-/*============= */
-///// ENUMS//////
-/*============= */
-
-enum Role {ADMIN, READ_ONLY, AUTHOR}
-
-const personENUM = {
-	name: "JerrSonJefferson",
-	age: 2000,
-	hobbies: ["fitness", "music"],
-	role: Role.ADMIN,
-}; 
-
-
 
