@@ -1,23 +1,10 @@
-// example of explicitly saying will be the expected output
-function add(n1: number, n2: number): number {
- return n1 + n2
+// bit more stricter than any core-type
+let userInput: unknown;
+
+
+// never type function is relativity new c.2020, 
+// and is meant to stop/break your code so it never returns a value.
+// this similar to the void type 
+function generateError(message:string, code:number):never { 
+ throw {message: message, errorCode: code};
 }
-
-// Void return type below
-// void function is a function without a return 
-
-function printResult(num:number) { //:void
- console.log(`Result:  ${num}`)
-}
-
-printResult(add(5,5 ))
-
-// declaring variables as functions 
-
-// this example tell Ts exactly what kind of function to expect 
-let combineVal: (a: number, b: number) => number
-
-// this example tell TS to expect a function, but not what kind
-//  the example below excepts any function including void functions 
-// this would defeat the purpose of being more specific using TS
-// ********** //let combineVal: Function //***************//
