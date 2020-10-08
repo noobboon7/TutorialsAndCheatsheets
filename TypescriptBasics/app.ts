@@ -8,3 +8,10 @@ let userInput: unknown;
 function generateError(message:string, code:number):never { 
  throw {message: message, errorCode: code};
 }
+
+// command that with compile your code automatically, but first 
+// navigate into the right directory 
+// creates a tsconfig file 
+
+// tsc --init 
+// combine w/ tsc -w || tsc --watch 
