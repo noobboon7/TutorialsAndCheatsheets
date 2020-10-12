@@ -15,3 +15,8 @@ function generateError(message:string, code:number):never {
 
 // tsc --init 
 // combine w/ tsc -w || tsc --watch 
+
+// sourceMap helps simplify the debugging process in larger applications 
+
+//outDir will be the route to where my js file are stored ex. dist
+
