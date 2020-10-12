@@ -20,3 +20,4 @@ function generateError(message:string, code:number):never {
 
 //outDir will be the route to where my js file are stored ex. dist
 
+// in the tsconfig you can write watch: true to auto compile your tsc 
