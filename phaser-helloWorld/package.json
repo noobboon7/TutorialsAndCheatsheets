@@ -12,5 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "phaser": "^3.50.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
   }
 }
