@@ -28,3 +28,15 @@
 - think recursively to use Memoization
 - think iteratively to use Tabulation
 - draw a strategy first!!!
+
+---
+
+Combinatorics: Field of math concerned with counting things.
+
+---
+
+### Common Questions regarding combinatorics:
+
+- Given N things, in how many ways can we arrange them?
+- In how many ways can we do X?
+- What is the shortest way to do Y?
